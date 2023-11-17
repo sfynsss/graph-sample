@@ -1,0 +1,27 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+
+<!-- <LayoutSnippet> -->
+<h1 class="mb-3">Files</h1>
+<a href="/onedrive/generate" class="btn btn-light btn-sm mb-3">Generate File</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Files</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {{#each files}}
+      {{#if this.folder }}
+      {{else}}
+        <tr>
+          <td><a href="{{ this.webUrl }}">{{this.id}}</a></td>
+          <td>{{this.name}}</td>
+        </tr>
+      {{/if}}
+    {{/each}}
+  </tbody>
+</table>
+<!-- </LayoutSnippet> -->
